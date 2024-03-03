@@ -1,8 +1,8 @@
 import { Page } from "@playwright/test";
 
 export default class SpecialHotPage {
-  
- constructor(public page: Page) {}
+
+  constructor(public page: Page) {}
 
    async addFirstProductToTheCart() {   
         await this.page.hover("//div[@class='image']/a", {
