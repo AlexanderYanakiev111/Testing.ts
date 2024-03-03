@@ -13,7 +13,7 @@ export default class SpecialHotPage {
   }
     
     async isToastVisible() {   
-        const toast = this.page.locator("//a[.='View Cart ']");
+        const toast = this.page.locator("//a[.='View Cart']");
         await toast.waitFor({state:"visible"});
         return toast;
     }
