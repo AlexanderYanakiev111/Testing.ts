@@ -1,10 +1,8 @@
 import { Page } from "@playwright/test";
+
 export default class RegisterPage {
-
-
-    constructor(public page: Page) { 
-        
-    }
+    
+    constructor(public page: Page) {}
 
     async enterFirstName(firstname: string) {
         await this.page.locator("#input-firstname")
@@ -17,10 +15,10 @@ export default class RegisterPage {
     }
 
     async enterEmail(email: string) {
-
         await this.page.locator("input[name='email']")
         .fill(email);
     }
+    
     async enterTelephone(telephone: string) {
         await this.page.locator("input[name='telephone']")
           .fill(telephone);
@@ -36,8 +34,7 @@ export default class RegisterPage {
           .fill(password);
     }
 
-   isSubscribeChecked() {
-
+    isSubscribeChecked() {
         return this.page.locator("#input-newsletter-no");
     }
 
@@ -48,6 +45,4 @@ export default class RegisterPage {
     async clickContinueToRegister() {     
         this.page.click("input[value='Continue']");
     }
-
-
 }
