@@ -4,7 +4,7 @@ import { json } from 'stream/consumers';
 const config: PlaywrightTestConfig = {
   testMatch: ["POMtest/addToCart.test.ts"],
   use: {
-    baseURL: "https://ecommerce-playgroung.lambdatest.io/index.php?",
+    baseURL: "https://ecommerce-playground.lambdatest.io/index.php?",
     headless: false,
     screenshot: "on",
     video: "on",
